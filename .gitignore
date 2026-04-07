@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+*.log
+*.pdf
+chroma_db/
+vector_store/
+.ipynb_checkpoints/
