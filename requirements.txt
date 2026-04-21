@@ -1,0 +1,12 @@
+anthropic
+chromadb
+streamlit
+plotly
+pandas
+numpy
+requests
+beautifulsoup4
+pypdf
+sentence-transformers
+faker
+python-dotenv
