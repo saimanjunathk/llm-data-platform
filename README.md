@@ -1,17 +1,37 @@
 # LLM Data Platform
 
-RAG system and AI agent platform with LangChain, vector DB and natural language SQL querying.
+## Live Demo
+View Live Dashboard: https://llm-data-platform.streamlit.app/
 
 ## Architecture
-Documents -> Ingestion -> Chunking -> Embeddings -> Vector DB -> RAG Pipeline -> AI Agents -> FastAPI
+Documents -> Chunking -> Embeddings (Sentence Transformers) -> ChromaDB Vector Store -> RAG Pipeline -> Claude LLM -> Streamlit Chat Interface
+
+## Features
+- RAG Chat: Ask questions about company reports and financial documents
+- AI SQL Agent: Natural language to SQL queries powered by Claude
+- Vector Store Explorer: Search and explore the knowledge base
 
 ## Tech Stack
-- LLM: OpenAI / Anthropic Claude
-- RAG: LangChain / LlamaIndex
-- Vector DB: Pinecone / Weaviate / ChromaDB
-- Agents: LangChain Agents + Custom Tools
-- API: FastAPI
-- Evaluation: RAGAS
+- LLM: Anthropic Claude (claude-haiku-4-5)
+- Embeddings: Sentence Transformers (all-MiniLM-L6-v2)
+- Vector DB: ChromaDB
+- RAG: Custom retrieval pipeline
+- SQL Agent: Claude-powered NL to SQL
+- Dashboard: Streamlit
+
+## How to Run Locally
+git clone https://github.com/saimanjunathk/llm-data-platform
+cd llm-data-platform
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+Add ANTHROPIC_API_KEY=your-key to .env file
+streamlit run dashboard/app.py
 
 ## Status
-In Progress
+- Document Ingestion - Done
+- Vector Embeddings - Done
+- ChromaDB Vector Store - Done
+- RAG Pipeline - Done
+- AI SQL Agent - Done
+- Live Dashboard - Done
